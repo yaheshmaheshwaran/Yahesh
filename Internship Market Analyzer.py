@@ -35,38 +35,38 @@ class Job_Market_Analyzer():
                     """)
 
                 profile_names = [
-                    "NET Development", "3D Printing", "AI Agent Development", "Accounts", "Acting",
-                    "Aerospace Engineering", "Agriculture and Food Engineering", "Analytics", "Android App Development",
-                    "Angular-js Development", "Animation", "Architecture", "Artificial Intelligence AI",
-                    "Audio Making/Editing", "Auditing", "Automobile Engineering", "Backend Development", "Bank",
-                    "Bioinformatics", "Biology", "Biotechnology Engineering", "Blockchain Development", "Blogging",
-                    "Brand Management", "Business Development", "Business/MBA", "CA Articleship", "CAD Design",
-                    "Campus Ambassador", "Chartered Accountancy (CA)", "Cinematography", "Civil Engineering",
-                    "Client Servicing", "Cloud Computing", "Commerce", "Company Secretary (CS)", "Computer Science",
-                    "Computer Vision", "Content Writing", "Copywriting", "Creative Design", "Creative Writing",
-                    "Culinary Arts", "Customer Service", "Cyber Security", "Data Entry", "Data Science",
-                    "Database Building", "Design", "Digital Marketing", "E-commerce", "Editorial", "Electric Vehicle",
-                    "Electrical Engineering", "Electronics Engineering", "Embedded Systems", "Engineering",
-                    "Engineering Design", "Event Management", "Fashion Design", "Film Making", "Finance",
-                    "Flutter Development", "Front End Development", "Full Stack Development", "Fundraising",
-                    "General Management", "Graphic Design", "Hospitality", "Hotel Management",
-                    "Human Resources (HR)", "Humanities", "Image Processing", "Industrial & Production Engineering",
-                    "Industrial Design", "Information Technology", "Interior Design", "International",
-                    "Internet of Things (IoT)", "Java Development", "Javascript Development", "Journalism", "Law",
-                    "Legal Research", "MLOps Engineering", "Machine Learning", "Manufacturing Engineering",
-                    "Market/Business Research", "Marketing", "Material Science", "Mechanical Engineering",
-                    "Mechatronics", "Media", "Medicine", "Merchandise Design", "Mobile App Development",
-                    "Motion Graphics", "NGO", "Natural Language Processing (NLP)", "Network Engineering",
-                    "Node.js Development", "Operations", "PHP Development", "Photography",
-                    "Political/Economics/Policy Research", "Product Management", "Programming", "Project Management",
-                    "Prompt Engineering", "Proofreading", "Psychology", "Public Relations (PR)",
-                    "Python-Django", "Quality Analyst", "Recruitment", "Ruby on Rails", "Sales", "Science",
-                    "Search Engine Optimization (SEO)", "Social Media Marketing", "Social Work", "Software Development",
-                    "Software Testing", "Sports", "Stock/Market Trading", "Strategy",
-                    "Subject Matter Expert (SME)", "Supply Chain Management (SCM)", "Talent Acquisition", "Teaching",
-                    "Telecalling", "Travel & Tourism", "UI/UX Design", "Video Making/Editing", "Videography",
-                    "Volunteering", "Web Development", "Wordpress Development", "iOS App Development"
-                ]
+                    "net-development", "3d-printing", "ai-agent-development", "accounts", "acting",
+                    "aerospace-engineering", "agriculture-and-food-engineering", "analytics", "android-app-development",
+                    "angular-js-development", "animation", "architecture", "artificial-intelligence-ai",
+                    "audio-making-editing", "auditing", "automobile-engineering", "backend-development", "bank",
+                    "bioinformatics", "biology", "biotechnology-engineering", "blockchain-development", "blogging",
+                    "brand-management", "business-development", "business-mba", "ca-articleship", "cad-design",
+                    "campus-ambassador", "chartered-accountancy-ca", "cinematography", "civil-engineering",
+                    "client-servicing", "cloud-computing", "commerce", "company-secretary-cs", "computer-science",
+                    "computer-vision", "content-writing", "copywriting", "creative-design", "creative-writing",
+                    "culinary-arts", "customer-service", "cyber-security", "data-entry", "data-science",
+                    "database-building", "design", "digital-marketing", "e-commerce", "editorial", "electric-vehicle",
+                    "electrical-engineering", "electronics-engineering", "embedded-systems", "engineering",
+                    "engineering-design", "event-management", "fashion-design", "film-making", "finance",
+                    "flutter-development", "front-end-development", "full-stack-development", "fundraising",
+                    "general-management", "graphic-design", "hospitality", "hotel-management",
+                    "human-resources-hr", "humanities", "image-processing", "industrial-production-engineering",
+                    "industrial-design", "information-technology", "interior-design", "international",
+                    "internet-of-things-iot", "java-development", "javascript-development", "journalism", "law",
+                    "legal-research", "mlops-engineering", "machine-learning", "manufacturing-engineering",
+                    "market-business-research", "marketing", "material-science", "mechanical-engineering",
+                    "mechatronics", "media", "medicine", "merchandise-design", "mobile-app-development",
+                    "motion-graphics", "ngo", "natural-language-processing-nlp", "network-engineering",
+                    "node-js-development", "operations", "php-development", "photography",
+                    "political-economics-policy-research", "product-management", "programming", "project-management",
+                    "prompt-engineering", "proofreading", "psychology", "public-relations-pr",
+                    "python-django", "quality-analyst", "recruitment", "ruby-on-rails", "sales", "science",
+                    "search-engine-optimization-seo", "social-media-marketing", "social-work", "software-development",
+                    "software-testing", "sports", "stock-market-trading", "strategy",
+                    "subject-matter-expert-sme", "supply-chain-management-scm", "talent-acquisition", "teaching",
+                    "telecalling", "travel-tourism", "ui-ux-design", "video-making-editing", "videography",
+                    "volunteering", "web-development", "wordpress-development", "ios-app-development"
+                ]   
 
                 locations = [
                     "Ahmedabad", "Alappuzha", "Amreli", "Amroha", "Anand", "Andhra Pradesh", "Annur", "Assam",
@@ -291,7 +291,21 @@ class Job_Market_Analyzer():
     class Virtualization():
 
         """with PdfPages('intenships.pdf') as pdf:
-            df=pd.DataFrame(job_dict)     # using the dictionary storage"""
+            df=pd.DataFrame(job_dict)     # using the dictionary storage"""    
+
+        @staticmethod
+        def Title_Page(pdf):
+            plt.figure(figsize=(16, 10))
+            plt.axis("off")
+            plt.text(0.5, 0.78, "Internship Market Report", fontsize=36, ha='center', va='center', fontweight='semibold')
+            plt.text(0.5, 0.72, "with (real time) datas", fontsize=30, ha='center', va='center', fontweight='bold')
+            plt.text(0.5, 0.58, "Generated by: Yahesh maheshwaran",fontstyle='oblique', fontsize=20, ha='center', va='center')
+            plt.text(0.5, 0.48, "Source: Internshala", fontsize=16, ha='center', va='center',color='dimgray')
+            plt.text(0.5, 0.38, "This report includes insights on (job titles, companies, locations, durations, and stipends).",
+                     fontsize=14, ha='center', va='center',color='dimgray')
+            plt.tight_layout()
+            pdf.savefig()
+            plt.close()
 
         @staticmethod
         def Csv():
@@ -313,6 +327,7 @@ class Job_Market_Analyzer():
             plt.ylabel('Name of company')
             plt.title("Top Hiring Companies")
             plt.xticks(rotation=20, ha='right')
+            plt.grid(True)
             plt.tight_layout()
             pdf.savefig()
             plt.close()
@@ -342,6 +357,7 @@ class Job_Market_Analyzer():
             ax.set_xticklabels(locations, rotation=30, ha='right')
             ax.set_ylabel("Number of Internships")
             ax.set_title("Top Hiring Locations - Stem Plot")
+            plt.grid(True)
             plt.tight_layout()
 
             # Save to PDF
@@ -368,6 +384,7 @@ class Job_Market_Analyzer():
             plt.ylabel("Number of Internships")
             plt.title("Internship Durations Distribution")
             plt.xticks(rotation=20, ha='left')
+            plt.grid(True)
             plt.tight_layout()
             pdf.savefig()
             plt.close()
@@ -570,16 +587,21 @@ if __name__ == "__main__":
     elif n == 1:
         Job_Market_Analyzer.Virtualization.Csv()
     else:
-        with PdfPages("internships.pdf") as pdf:
+        with PdfPages("Internships by Yahesh.pdf") as pdf:
             if n == 2:
+                Job_Market_Analyzer.Virtualization.Title_Page(pdf)
                 Job_Market_Analyzer.Virtualization.Job_Hiring_Companies(df, pdf)
             elif n == 3:
+                Job_Market_Analyzer.Virtualization.Title_Page(pdf)
                 Job_Market_Analyzer.Virtualization.Top_Hiring_Location(job_dict, pdf)
             elif n == 4:
+                Job_Market_Analyzer.Virtualization.Title_Page(pdf)
                 Job_Market_Analyzer.Virtualization.Internship_Durations(job_dict, pdf)
             elif n == 5:
+                Job_Market_Analyzer.Virtualization.Title_Page(pdf)
                 Job_Market_Analyzer.Virtualization.Stipend_Range_Analysis(job_dict, pdf)
             elif n == 6:
+                Job_Market_Analyzer.Virtualization.Title_Page(pdf)
                 Job_Market_Analyzer.Virtualization.Csv()
                 Job_Market_Analyzer.Virtualization.Job_Hiring_Companies(df, pdf)
                 Job_Market_Analyzer.Virtualization.Top_Hiring_Location(job_dict, pdf)
